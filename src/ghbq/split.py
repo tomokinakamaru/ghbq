@@ -9,3 +9,7 @@ def main(args):
     f1, f2 = FileList.load(args.path).split()
     f1.save(f'{name}.a{ext}')
     f2.save(f'{name}.b{ext}')
+
+
+if __name__ == '__main__':
+    main()  # pragma: no cover
