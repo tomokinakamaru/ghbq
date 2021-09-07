@@ -12,3 +12,7 @@ def main(args):
     name, ext = splitext(args.path)
     f = FileList.load(args.path).sample(args.size)
     f.save(f'{name}.{args.size}{ext}')
+
+
+if __name__ == '__main__':
+    main()  # pragma: no cover
