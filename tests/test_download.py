@@ -36,7 +36,7 @@ def test_error():
     assert match(
         r'\d{4}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2} foo/bar/master/foo'
         " a bytes-like object is required, not 'NoneType'",
-        fileread('sample.err')
+        fileread('sample.ghbq.err')
     )
 
 
