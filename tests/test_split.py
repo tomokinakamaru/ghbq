@@ -4,7 +4,7 @@ from util import filewrite
 from util import patch_argv
 
 
-def test_sample():
+def test_split():
     filewrite('sample.csv', """
     foo/bar:refs/heads/master:foo
     foo/bar:refs/heads/master:bar
