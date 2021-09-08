@@ -1,7 +1,7 @@
 from ghbq.sample import main
+from util import argv
 from util import fileread
 from util import filewrite
-from util import patch_argv
 
 
 def test_sample():
@@ -10,6 +10,7 @@ def test_sample():
     foo/bar:refs/heads/master:bar
     """)
 
-    with patch_argv('sample.csv', 1):
+    with argv('sample.csv', 1):
         main()
+
     assert fileread('sample.1.csv').count('\n') == 1

@@ -1,10 +1,10 @@
 from ghbq.generate import main
 from textwrap import dedent
-from util import patch_argv
+from util import argv
 
 
 def test_generate(capfd):
-    with patch_argv('^foo$'):
+    with argv('^foo$'):
         main()
 
     out, _ = capfd.readouterr()
@@ -18,7 +18,7 @@ def test_generate(capfd):
 
 
 def test_branch(capfd):
-    with patch_argv('^foo$', '-b', 'bar'):
+    with argv('^foo$', '-b', 'bar'):
         main()
 
     out, _ = capfd.readouterr()
@@ -32,7 +32,7 @@ def test_branch(capfd):
 
 
 def test_sample(capfd):
-    with patch_argv('^foo$', '-s', 100):
+    with argv('^foo$', '-s', 100):
         main()
 
     out, _ = capfd.readouterr()
