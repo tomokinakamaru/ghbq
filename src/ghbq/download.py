@@ -65,7 +65,7 @@ def save(data, path):
 def log(outdir, msg):
     mkdir(outdir)
     time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    path = f'{outdir}.ghbq.err'
+    path = f'{outdir}.err'
     with lock, open(path, 'a') as f:
         f.write(f'{time} {msg}\n')
 
